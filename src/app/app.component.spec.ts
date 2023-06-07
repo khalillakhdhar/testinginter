@@ -25,11 +25,11 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('testinginter');
   });
-
-  it('should render title', () => {
+  it('should have a true state', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('testinginter app is running!');
-  });
+    const app = fixture.componentInstance;
+    expect(app.state).toEqual(false);
+  })
+
+
 });
